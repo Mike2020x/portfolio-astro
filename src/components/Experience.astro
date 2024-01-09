@@ -1,0 +1,37 @@
+---
+import type { Code } from "astro:components";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Diciembre 2023",
+    title: "Green Trace",
+    description:
+      "Green Trace es una aplicación que tiene como objetivo ayudarte a conocer tus emisiones de CO2 en función de tus actividades diarias (transporte, ocio, trabajo, reciclaje y más). Si tus emisiones son demasiado altas, te daremos consejos para reducirlas y así juntos podamos tener un mundo mejor y más sostenible.",
+    link: "https://c15-04-m-node-react.vercel.app/",
+  },
+  {
+    date: "Octubre 2023",
+    title: "Gatsby blog",
+    description: "My personal Blog using Gatsby",
+    link: "https://tranquil-hamster-21a7e0.netlify.app/",
+  },
+
+  {
+    date: "Septiembre 2023",
+    title: "MIR Hotel app Frontend",
+    description: "MIR Hotel app Frontend",
+    link: "https://frontend-top-v29-hoteles.vercel.app/",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
